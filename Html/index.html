@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="calcContainer">
+        <form name="calculator">
+            <!-- top row -->
+            <div class="result-clear">
+                <!-- Display -->
+                <input type="text" class="result" name="answer" readonly />
+                <!-- Clear Button -->
+                <input type="button" class="clear" value="AC" onclick="calculator.answer.value = ''" />
+            </div>
+            <!-- All input buttons -->
+            <div class="grid-buttons">
+                <!-- 2nd row -->
+                <input type="button" value="9" onclick="calculator.answer.value += '9'" />
+                <input type="button" value="8" onclick="calculator.answer.value += '8'" />
+                <input type="button" value="7" onclick="calculator.answer.value += '7'" />
+                <input type="button" value="+" onclick="calculator.answer.value += '+'" class="math" />
+                <br />
+                <!-- 3rd row -->
+                <input type="button" value="4" onclick="calculator.answer.value += '4'" />
+                <input type="button" value="5" onclick="calculator.answer.value += '5'" />
+                <input type="button" value="6" onclick="calculator.answer.value += '6'" />
+                <input type="button" value="-" onclick="calculator.answer.value += '-'" class="math" />
+                <br />
+                <!-- 4th row -->
+                <input type="button" value="1" onclick="calculator.answer.value += '1'" />
+                <input type="button" value="2" onclick="calculator.answer.value += '2'" />
+                <input type="button" value="3" onclick="calculator.answer.value += '3'" />
+                <input type="button" value="÷" onclick="calculator.answer.value += '/'" class="math" />
+                <br />
+                <!-- 5th row -->
+                <input type="button" value="." onclick="calculator.answer.value += '.'" />
+                <input type="button" value="0" onclick="calculator.answer.value += '0'" />
+                <input type="button" value="=" onclick="calculator.answer.value = eval(calculator.answer.value)" />
+                <input type="button" value="×" onclick="calculator.answer.value += '*'" class="math" />
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
